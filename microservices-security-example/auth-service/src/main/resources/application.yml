@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/courseclub?createDatabaseIfNotExist=true&useSSL=true&serverTimezone=Asia/Baku&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: hamid318
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+      org.hibernate.envers.audit_table_suffix: _log
+
+server:
+  port: 8082
+  servlet:
+    context-path: /
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    fetch-registry: true
+
+jwt:
+  token:
+    public-key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJtPJFD3WKrP4yQvaBVvb4jPnEG0U86NigSl2VR6O6ecFg9QJwlbsZbOCRFFZW14pkK5CdvhkHglU+d+kbMuKUTGULnECSQJ4651HllBRx/rxsBDDjbgD/hF7fZNUPDqxOXiwYlp2kHx+Ra8eahqNr702oMxg5Skve30r2FycsbwIDAQAB
+    private-key: MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAMm08kUPdYqs/jJC9oFW9viM+cQbRTzo2KBKXZVHo7p5wWD1AnCVuxls4JEUVlbXimQrkJ2+GQeCVT536Rsy4pRMZQucQJJAnjrnUeWUFHH+vGwEMONuAP+EXt9k1Q8OrE5eLBiWnaQfH5Frx5qGo2vvTagzGDlKS97fSvYXJyxvAgMBAAECgYEApeThgTU2ukiPhK0YasYot8HSxpybNH5ZdHPVRiq2mW78Qg8g45HyYPXwOMJeRGxf0QUXmvU3RrrF+2vJ1+ng+Rn/jRDFgH/pEpmVPnikc9imFmDbvijFAZL/7nFokEcweE2d2ws7XJ0mVjbNUMf9CIBJuq6B0E18l6OjbcrtdckCQQD5KXMH7PMKdVbs6UZ9YF8qAkBTFUIzaThZePHM9gEwlFdjMA/JVsDd62tkOBRtZkDjRALrNWfRuMSo9nwhHbZzAkEAzz4W0+P8H4CMdjLz0cLC40U17CIsqSZV9uYXnCj3cRv2InTXy/C8+zE8RArXKSVN+kmzmqDoA+QDbZNDFsm3FQJBAOVoUX5Jn1jQwvEss3c6pUQzgHA+0Y4uYfCXV+LD2kKVQoSTuuVBGCD74gwLSluT20ik1R8lM+q3+XIsSAvhpJsCQC2fEnFkv8zDhKhEgS4M/NABHWS1BTXbTZNDhbEHx6jrqdxd8l9fyIpXhVfJNyJEpwzRCqugflLU7/hAMcWjdB0CQQDfVZSW3eYeexIANzeDmvWK5J0/lCubI0YDY63cBw1Llie8QrXGws6dyDKamAnNuTfyW+eouTp7YwVBaGCxWNq+
+    access-token-validity-time: 3600000
+    refresh-token-validity-time: 86400000

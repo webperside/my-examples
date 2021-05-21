@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: course-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/courseclub?createDatabaseIfNotExist=true&useSSL=true&serverTimezone=Asia/Baku&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: hamid318
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+      org.hibernate.envers.audit_table_suffix: _log
+
+server:
+  port: 8084
+  servlet:
+    context-path: /
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    fetch-registry: true

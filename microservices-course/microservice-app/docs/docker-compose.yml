@@ -1,0 +1,31 @@
+version: "3.3"
+services:
+  cassandra:
+    image: "cassandra"
+    ports:
+      - "9042:9042"
+
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: microservice-app
+    ports:
+    - '3306:3306'
+
+  elasticsearch:
+    image: elasticsearch:7.6.1
+    ports:
+    - 9200:9200
+    - 9300:9300
+    environment:
+      discovery.type: single-node
+
+  msrabbitmq:
+    image: rabbitmq:3-management
+    ports:
+    - '5672:5672'
+    - '15672:15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=testhamid318
+      - RABBITMQ_DEFAULT_PASS=testhamid318

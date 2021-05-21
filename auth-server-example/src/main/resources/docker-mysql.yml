@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  mysql:
+    container_name: auth-server-db
+    image: mysql:8.0.21
+    ports:
+      - '3307:3306'
+      - '33070:33060'
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - "/home/hamid/docker/mysql:/var/lib/mysql"
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: hamid318

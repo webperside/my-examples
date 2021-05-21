@@ -1,0 +1,17 @@
+server:
+  servlet:
+    context-path: /
+  port: 8080
+
+
+jwt:
+  token:
+    private-key: MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAIyGFMtcnxDcOAXWUcrq8+RpruiCg9uMqKDmt8vSbNpgnqeFBBTwLI9FoJqTgMzWfOA/sceZVQmYCd5JNyh9F4ztd06ARlyxSn6MeSnYxuayIa1G4OHBtJq8vdNlw+wob5HnXeY69v909sVtb3Vnwy8nSFm7n0QI4N3+PTplAso5AgMBAAECgYBKUDX6/bZZEjzGSXrj1rC4IHORHkRg/NfIj3qvXU6XhfUhHiT0dbb65ZVzaYH50Ywkg0qfBaWE91Rwq0NyNAUZhz3Qhi+Hn7hEPRTis369lBILHCb2bABqppeu0vCTcEREbCXhFLActF7BtCBTvSwz12XpGwn24CnPtPZ4vQWzIQJBAMbiQsTymQEBJroxzwiZgX2ieTr9o7rUGpoPRclNsU2ugTjMRr/YpcRoqpW9hOYZ/aCmIzx6GdHo9IALFGrYRWUCQQC04T8NicLHOsrCctkLhjeM/U+gRDFYNeIaIDhpP6BaYS8NTiztb/mpf2P2Rllpp8SMi23nI38GbyzDXITw+V5FAkAVFoan5WVN0vZtRbzDF6vAS4r5M026EKVlcnse1isXpoozII3b57fj9Ikp6Xd/AoB/GT6hOf0k4cOTFBmtHpN1AkEAg4o6/HFuwMw0n+w9g2/7/gBJY9ezut6Uq0M7Qu8OgiuiuB5d9d40xdrqqzLF21wyR7MuHaVmvxsihoBF/aibsQJBAIx8bDpCTLMMK6rtwNVSfca/PJIvGJyI7c8pn9tOYgkRMsR5cq4rzFsp8M1uChRf9QowqR2VmgkVHScZGDLDdYI=
+    public-key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCMhhTLXJ8Q3DgF1lHK6vPkaa7ogoPbjKig5rfL0mzaYJ6nhQQU8CyPRaCak4DM1nzgP7HHmVUJmAneSTcofReM7XdOgEZcsUp+jHkp2MbmsiGtRuDhwbSavL3TZcPsKG+R513mOvb/dPbFbW91Z8MvJ0hZu59ECODd/j06ZQLKOQIDAQAB
+    access-token-validity-time: 3600000
+    refresh-token-validity-time: 86400000
+
+#jwt:
+#  secret: hamidsultanzadeh
+#  access-token-validity-time: 3600000
+#  refresh-token-validity-time: 86400000
