@@ -1,0 +1,20 @@
+{
+  "type": "default",
+  "components": [
+    {
+      "key": "textfield2",
+      "label": "Text Field 2",
+      "type": "textfield",
+      "description": "Text Field Description 2",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "key": "textfield3",
+      "label": "Text Field 3",
+      "type": "textfield",
+      "description": "Text Field Description 3"
+    }
+  ]
+}
