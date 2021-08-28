@@ -5,17 +5,17 @@
       <bpmn:outgoing>SequenceFlow_1fp17al</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="SequenceFlow_1fp17al" sourceRef="StartEvent_1" targetRef="say-hello" />
-    <bpmn:userTask id="say-hello" name="Say hello to&#10;hamid" camunda:formKey="camunda-forms:/forms/form_1.form" camunda:candidateUsers="hamid">
+    <bpmn:userTask id="say-hello" name="Just input two fields" camunda:formKey="camunda-forms:/forms/form_1.form" camunda:candidateUsers="hamid">
       <bpmn:incoming>SequenceFlow_1fp17al</bpmn:incoming>
       <bpmn:outgoing>Flow_0qmp54h</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_0qmp54h" sourceRef="say-hello" targetRef="Activity_0dpiwvi" />
-    <bpmn:userTask id="Activity_0dpiwvi" name="Test model app waiting for feedback" camunda:formKey="camunda-forms:/forms/form_2.form">
+    <bpmn:userTask id="Activity_0dpiwvi" name="good job, now input one more field" camunda:formKey="camunda-forms:/forms/form_2.form">
       <bpmn:incoming>Flow_0qmp54h</bpmn:incoming>
       <bpmn:outgoing>Flow_01gmhr5</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_01gmhr5" sourceRef="Activity_0dpiwvi" targetRef="Activity_1sh9vnk" />
-    <bpmn:userTask id="Activity_1sh9vnk" name="Test User Task 2">
+    <bpmn:userTask id="Activity_1sh9vnk" name="nice work. that values you just input :) click the load values :)">
       <bpmn:incoming>Flow_01gmhr5</bpmn:incoming>
       <bpmn:outgoing>Flow_0vxm7cl</bpmn:outgoing>
     </bpmn:userTask>
